@@ -1,8 +1,3 @@
-# To build and run with Docker:
-#
-#  $ docker build -t kewalz/ng2oidc .
-#  $ docker run -it --rm -p 4200:4200 kewalz/ng2oidc
-#
 FROM node:latest
 
 RUN mkdir -p /quickstart /home/nodejs && \
@@ -19,3 +14,6 @@ RUN chown -R nodejs:nodejs /quickstart
 USER nodejs
 
 CMD npm start
+
+
+
