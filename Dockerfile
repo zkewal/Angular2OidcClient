@@ -1,7 +1,7 @@
 # To build and run with Docker:
 #
-#  $ docker build -t ng2-quickstart .
-#  $ docker run -it --rm -p 3000:3000 -p 3001:3001 ng2-quickstart
+#  $ docker build -t kewalz/ng2oidc .
+#  $ docker run -it --rm -p 4200:4200 kewalz/ng2oidc
 #
 FROM node:latest
 
@@ -12,7 +12,7 @@ RUN mkdir -p /quickstart /home/nodejs && \
 
 WORKDIR /quickstart
 COPY package.json /quickstart/
-RUN npm install --unsafe-perm=true
+RUN npm install
 
 COPY . /quickstart
 RUN chown -R nodejs:nodejs /quickstart
