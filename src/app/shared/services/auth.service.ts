@@ -177,12 +177,12 @@ export class AuthService {
 }
 
 const settings: any = {
-  authority: 'http://localhost:5000/oidc',
+  authority: 'http://localhost:5000',
   client_id: 'js.tokenmanager',
   redirect_uri: 'http://localhost:4200/auth.html',
   post_logout_redirect_uri: 'http://localhost:4200/',
   response_type: 'id_token token',
-  scope: 'openid email roles',
+  scope: 'openid api1',
 
   silent_redirect_uri: 'http://localhost:4200',
   automaticSilentRenew: true,
